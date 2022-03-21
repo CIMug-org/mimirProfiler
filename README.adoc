@@ -11,5 +11,39 @@ The mimirProfiler should be able to allow users to create a profile based on a v
 
 image::documentation/figures/overviewDiagram.png[]
 
-== Break Down Into Parts
+== Internal model of the mimirProfiler
+
+The internal data model of the mimirProfiler is based on the link:https://www.w3.org/TR/dx-prof/[dx-Prof specification].
+
+
+[plantuml, target=diagram-classes, format=png]
+....
+class "prof:Profile"
+class "prof:ResourceDescriptor"
+class "rdfs:Resource"
+
+class "dct:MediaTypeOrExtend"
+enum "prof:ResourceRole" {
+    role:constraint
+    role:vocabulary
+    role:specification
+    role:schema 
+}
+
+abstract class "owl:Thing" { 
+rdfs:comment  : "xsd:string" 
+}
+
+"owl:Thing"<|-- "prof:Profile"
+"owl:Thing"<|-- "rdfs:Resource"
+"owl:Thing"<|-- "prof:ResourceDescriptor"
+"owl:Thing"<|-- "prof:ResourceRole"
+"owl:Thing"<|-- "dct:MediaTypeOrExtend"
+
+"prof:Profile" -->  "prof:ResourceDescriptor" : "prof:hasResource"
+"prof:ResourceDescriptor" -->  "dct:MediaTypeOrExtend" : "dct:format"
+"prof:ResourceDescriptor" -->  "prof:ResourceRole" : "prof:hasRole"
+"prof:ResourceDescriptor" -->  "rdfs:Resource" : "prof:hasArtifact"
+....
+
 
