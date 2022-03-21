@@ -13,37 +13,24 @@ image::documentation/figures/overviewDiagram.png[]
 
 == Internal model of the mimirProfiler
 
+
+
+=== Profile
+
 The internal data model of the mimirProfiler is based on the link:https://www.w3.org/TR/dx-prof/[dx-Prof specification].
 
+image::documentation/figures/profile.svg[]
 
-[plantuml, target=diagram-classes, format=png]
-....
-class "prof:Profile"
-class "prof:ResourceDescriptor"
-class "rdfs:Resource"
+=== Vocabulary
 
-class "dct:MediaTypeOrExtend"
-enum "prof:ResourceRole" {
-    role:constraint
-    role:vocabulary
-    role:specification
-    role:schema 
-}
+The vocabulary is the open-world model that specifies (data) definitions in a use-case a-specific way. An important goal of such a vocabulary is to make data from different systems, processes and organizations interoperable.
 
-abstract class "owl:Thing" { 
-rdfs:comment  : "xsd:string" 
-}
+In the mimirProfiler, the vocabulary is modelled according to the link:https://en.wikipedia.org/wiki/Web_Ontology_Language[OWL]
 
-"owl:Thing"<|-- "prof:Profile"
-"owl:Thing"<|-- "rdfs:Resource"
-"owl:Thing"<|-- "prof:ResourceDescriptor"
-"owl:Thing"<|-- "prof:ResourceRole"
-"owl:Thing"<|-- "dct:MediaTypeOrExtend"
+image::documentation/figures/vocabulary.svg[]
 
-"prof:Profile" -->  "prof:ResourceDescriptor" : "prof:hasResource"
-"prof:ResourceDescriptor" -->  "dct:MediaTypeOrExtend" : "dct:format"
-"prof:ResourceDescriptor" -->  "prof:ResourceRole" : "prof:hasRole"
-"prof:ResourceDescriptor" -->  "rdfs:Resource" : "prof:hasArtifact"
-....
+=== Constraints
 
+The constraints are modelled conform the Shape and Constraints Language.
 
+image::documentation/figures/constraint.svg[]
