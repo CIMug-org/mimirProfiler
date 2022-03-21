@@ -7,11 +7,9 @@ This project aims to create tooling that allows data modellers to create link:ht
 
 == Desired Functionality
 
-The mimirProfiler should be able to allow user to create a profile based on a vocabulary. This vocabulary is typically expressed as a link:https://en.wikipedia.org/wiki/Web_Ontology_Language[Web Ontology Language (OWL)] or a link:https://en.wikipedia.org/wiki/Class_diagram[Unified Modelling Language (UML) Class Diagram].
+The mimirProfiler should be able to allow users to create a profile based on a vocabulary. This vocabulary is typically expressed as a link:https://en.wikipedia.org/wiki/Web_Ontology_Language[Web Ontology Language (OWL)] or a link:https://en.wikipedia.org/wiki/Class_diagram[Unified Modelling Language (UML) Class Diagram].
 
-
-
+image::documentation/figures/overviewDiagram.png[]
 
 == Break Down Into Parts
 
-https://avro.apache.org/docs/current/spec.html
