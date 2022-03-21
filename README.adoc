@@ -1,0 +1,17 @@
+= mimirProfiler
+
+
+== Introduction
+
+This project aims to create tooling that allows data modellers to create link:https://www.w3.org/TR/dx-prof/[profiles] and specific technology-based link:https://www.w3.org/TR/dx-prof/#Role:schema[schema's] (like link:https://www.w3.org/TR/xmlschema11-1/[XSD], link:https://www.w3.org/TR/xmlschema11-1/[SQL table definitions], link:https://json-schema.org/[JSON schema], link:https://avro.apache.org/docs/current/spec.html[Apache Avro Schema]) based on link:https://www.w3.org/TR/dx-prof/#Role:vocabulary[vocabularies].
+
+== Desired Functionality
+
+The mimirProfiler should be able to allow user to create a profile based on a vocabulary. This vocabulary is typically expressed as a link:https://en.wikipedia.org/wiki/Web_Ontology_Language[Web Ontology Language (OWL)] or a link:https://en.wikipedia.org/wiki/Class_diagram[Unified Modelling Language (UML) Class Diagram].
+
+
+
+
+== Break Down Into Parts
+
+https://avro.apache.org/docs/current/spec.html
