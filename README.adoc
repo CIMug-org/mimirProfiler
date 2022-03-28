@@ -7,30 +7,13 @@ This project aims to create tooling that allows data modellers to create link:ht
 
 == Desired Functionality
 
-The mimirProfiler should be able to allow users to create a profile based on a vocabulary. This vocabulary is typically expressed as a link:https://en.wikipedia.org/wiki/Web_Ontology_Language[Web Ontology Language (OWL)] or a link:https://en.wikipedia.org/wiki/Class_diagram[Unified Modelling Language (UML) Class Diagram].
+The mimirProfiler should be able to allow users to create a link:https://www.w3.org/TR/dx-prof/[profile] based on a vocabulary. This vocabulary is typically expressed as a link:https://en.wikipedia.org/wiki/Web_Ontology_Language[Web Ontology Language (OWL)] or a link:https://en.wikipedia.org/wiki/Class_diagram[Unified Modelling Language (UML) Class Diagram].
 
 image::documentation/figures/overviewDiagram.png[]
 
-== Internal model of the mimirProfiler
 
 
+== The profiling process
+The process through which the user will be able to create a profile is shown in the diagram below:
 
-=== Profile
-
-The internal data model of the mimirProfiler is based on the link:https://www.w3.org/TR/dx-prof/[dx-Prof specification].
-
-image::documentation/figures/profile.svg[]
-
-=== Vocabulary
-
-The vocabulary is the open-world model that specifies (data) definitions in a use-case a-specific way. An important goal of such a vocabulary is to make data from different systems, processes and organizations interoperable.
-
-In the mimirProfiler, the vocabulary is modelled according to the link:https://en.wikipedia.org/wiki/Web_Ontology_Language[OWL]
-
-image::documentation/figures/vocabulary.svg[]
-
-=== Constraints
-
-The constraints are modelled conform the Shape and Constraints Language.
-
-image::documentation/figures/constraint.svg[]
+image::documentation/figures/profilingProcess.svg[]

@@ -1,0 +1,18 @@
+@startuml profilingProcess
+
+start
+if (update existing profile) then (yes)
+:Open Profile;   
+else (no)
+endif 
+:Import (aditional) 
+vocabularies;
+:Select (aditional) classes + properties
+and set desired cardinalities;
+:Set Rootobject(s); 
+:Indicate which schemas 
+are to be generated;
+:Press  "Go"; 
+stop
+
+@enduml

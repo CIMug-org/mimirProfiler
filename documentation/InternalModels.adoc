@@ -1,0 +1,28 @@
+= Internal data model of the mimirProfiler
+
+The internal data model of the mimirProfiler consists of several parts. Most notably
+
+- profile
+- vocabulary
+- constraints
+
+
+== Profile
+
+The internal data model of the mimirProfiler is based on the link:https://www.w3.org/TR/dx-prof/[dx-Prof specification].
+
+image::figures/profile.svg[]
+
+== Vocabulary
+
+The vocabulary is the open-world model that specifies (data) definitions in a use-case a-specific way. An important goal of such a vocabulary is to make data from different systems, processes and organizations interoperable.
+
+In the mimirProfiler, the vocabulary is modelled according to the link:https://en.wikipedia.org/wiki/Web_Ontology_Language[OWL]
+
+image::figures/vocabulary.svg[]
+
+== Constraints
+
+The constraints are modelled conform the Shape and Constraints Language.
+
+image::figures/constraint.svg[]
